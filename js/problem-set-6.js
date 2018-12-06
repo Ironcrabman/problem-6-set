@@ -48,29 +48,34 @@ function drawRectangle() {
   let x;
   let y;
 
+  do {
+    width = prompt(`Please enter the width for the rectangle`);
+  } while (width < 1 || width > 1024 || NaN)
+
  do {
   height = prompt(`Please enter the height for the rectangle`);
 } while (height < 1 ||  height > 512 || NaN)
 
-do {
-  width = prompt(`Please enter the width for the rectangle`);
-} while (width < 1 || width > 1024 || NaN)
-
-do {
+ do {
   x = prompt(`Please enter the X coordinate for the rectangle`);
 } while (x < 5 || NaN || x > 1024)
 
-do {
-  y = prompt(`Please enter the Y coordinate for the rectangle`);
+ do {
+   y = prompt(`Please enter the Y coordinate for the rectangle`);
 } while (y < 5 || NaN || x > 512)
 
+width = Number(width);
+height = Number(height);
+x = Number(x);
+y = Number(y);
+
 if((y + height) > 512 || (x + width) > 1024) {
-  alert("Invaild input will not fit on canvas.");
-}else {
-  let canvas = document.getElementById('canvas2');
-  let ctx = canvas.getContext('2d');
-  ctx.strokeRect(x, y, width, height);
-}
+   alert("Invaild inputs please try again.")
+ }else {
+   let canvas = document.getElementById('canvas2');
+   let ctx = canvas.getContext('2d');
+   ctx.strokeRect(x, y, width, height);
+ }
 }
 
 /*
@@ -99,7 +104,16 @@ if((y + height) > 512 || (x + width) > 1024) {
  */
 
 function drawColoredRectangle() {
+  let canvas = document.getElementById('canvas3');
+  let ctx = canvas.getContext('2d');
+  let color = prompt("Please enter a supported color.")
 
+  while(color !="black" && color !="blue" && color !="green" && color !="orange" && color !="purple" && color !="red" && color !="yellow"){
+    color = prompt("Color is not supported please enter another one.")
+  }
+
+ctx.fillStyle = `${color}`;
+ctx.fillRect(10, 10, 100, 50);
 }
 
 /*
@@ -132,7 +146,30 @@ function drawColoredRectangle() {
  */
 
 function drawTriangle() {
+  let canvas = document.getElementById('canvas4');
+  let ctx = canvas.getContext('2d');
 
+  let a = prompt("Enter the length of side 1");
+  let b = prompt("Enter the length of side 2");
+  let c = prompt("Enter the length of side 3");
+
+while((a*a) + (b*b) != c*c || a + 10 >= 512 || b + 10 >= 1024){
+  alert("Please enter valid measurements for the triangle")
+  a = prompt("Enter the length of side 1");
+  b = prompt("Enter the length of side 2");
+  c = prompt("Enter the length of side 3");
+}
+a = Number(a)
+b = Number(b)
+  a = a + 10
+  b = b + 10
+
+  ctx.beginPath();
+  ctx.moveTo(10, 10);
+  ctx.lineTo(10, a);
+  ctx.lineTo(b, a);
+  ctx.lineTo(10, 10)
+  ctx.stroke();
 }
 
 /*
