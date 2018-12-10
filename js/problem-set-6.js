@@ -13,6 +13,7 @@
 function sayHello() {
     let canvas = document.getElementById('canvas1')
     let ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, 1024, 512)
     ctx.font = '48px sans-serif';
     ctx.strokeText('Hello, World!', 10, 50);
 
@@ -42,7 +43,9 @@ function sayHello() {
  */
 
 function drawRectangle() {
-
+  let canvas = document.getElementById('canvas2');
+  let ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 1024, 512)
   let height;
   let width;
   let x;
@@ -72,8 +75,6 @@ y = Number(y);
 if((y + height) > 512 || (x + width) > 1024) {
    alert("Invaild inputs please try again.")
  }else {
-   let canvas = document.getElementById('canvas2');
-   let ctx = canvas.getContext('2d');
    ctx.strokeRect(x, y, width, height);
  }
 }
@@ -106,6 +107,7 @@ if((y + height) > 512 || (x + width) > 1024) {
 function drawColoredRectangle() {
   let canvas = document.getElementById('canvas3');
   let ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 1024, 512)
   let color = prompt("Please enter a supported color.")
 
   while(color !="black" && color !="blue" && color !="green" && color !="orange" && color !="purple" && color !="red" && color !="yellow"){
@@ -148,17 +150,26 @@ ctx.fillRect(10, 10, 100, 50);
 function drawTriangle() {
   let canvas = document.getElementById('canvas4');
   let ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 1024, 512)
 
   let a = prompt("Enter the length of side 1");
   let b = prompt("Enter the length of side 2");
   let c = prompt("Enter the length of side 3");
+  a = Number(a)
+  b = Number(b)
+  c = Number(c)
 
-while((a*a) + (b*b) != c*c || a + 10 >= 512 || b + 10 >= 1024){
+
+while((a*a) + (b*b) != (c*c) || a + 10 >= 512 || b + 10 >= 1024){
   alert("Please enter valid measurements for the triangle")
   a = prompt("Enter the length of side 1");
+  a = Number(a)
   b = prompt("Enter the length of side 2");
+  b = Number(b)
   c = prompt("Enter the length of side 3");
+  c = Number(c)
 }
+
 a = Number(a)
 b = Number(b)
   a = a + 10
@@ -192,7 +203,41 @@ b = Number(b)
  */
 
 function drawSmileyFace() {
+let canvas = document.getElementById('canvas5');
+let ctx = canvas.getContext('2d');
+ctx.clearRect(0, 0, 1024, 512)
+let face
+let x = 10;
+let y = 10;
 
+do {
+  face = prompt("Enter the Smiley face radius");
+  face = Number(face);
+} while (face + x >= 1024 || face + y >= 512 || face < 1)
+
+while(x - face < 10 || x + face > 1024) {
+   x+= 10
+}
+while(y - face < 10 || y + face > 1024) {
+  y+= 10
+}
+
+let mouth = face*0.70
+let eyes = face*0.10
+let e1x = x - (face/4)
+let e1y = y - (face/3)
+let e2x = x + (face/2.5)
+let e2y = y - (face/3)
+
+ctx.beginPath();
+ctx.arc(x,y,face,0,2*Math.PI);
+//left eye
+ctx.moveTo(e1x, e1y);
+ctx.arc(e1x-eyes, e1y, eyes, 0, 2*Math.PI);
+//Right eye
+ctx.moveTo(e2x, e2y);
+ctx.arc(e2x-eyes, e2y, eyes, 0, 2*Math.PI);
+ctx.stroke();
 }
 
 /*
