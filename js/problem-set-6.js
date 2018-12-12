@@ -111,7 +111,7 @@ function drawColoredRectangle() {
   let color = prompt("Please enter a supported color.")
 
   while(color !="black" && color !="blue" && color !="green" && color !="orange" && color !="purple" && color !="red" && color !="yellow"){
-    color = prompt("Color is not supported please enter another one.")
+    color = prompt(`${color} is not supported please enter another one.`)
   }
 
 ctx.fillStyle = `${color}`;
@@ -228,6 +228,8 @@ let e1x = x - (face/4)
 let e1y = y - (face/3)
 let e2x = x + (face/2.5)
 let e2y = y - (face/3)
+let m = y + (face/9)
+
 
 ctx.beginPath();
 ctx.arc(x,y,face,0,2*Math.PI);
@@ -237,7 +239,11 @@ ctx.arc(e1x-eyes, e1y, eyes, 0, 2*Math.PI);
 //Right eye
 ctx.moveTo(e2x, e2y);
 ctx.arc(e2x-eyes, e2y, eyes, 0, 2*Math.PI);
+//Mouth
+ctx.moveTo(x+mouth,m);
+ctx.arc(x, m, mouth, 0, Math.PI);
 ctx.stroke();
+
 }
 
 /*
@@ -278,6 +284,23 @@ function drawStar() {
  */
 
 function drawStopSign() {
+  let canvas = document.getElementById('canvas7');
+  let ctx = canvas.getContext('2d');
+  let side = (Math.sqrt(2)*40).toFixed(0)
+
+//57 = the triangle side lengths
+
+  ctx.beginPath();
+  ctx.moveTo(100, 10);
+  ctx.lineTo(180, 10);
+  ctx.lineTo(237, 67);
+  ctx.lineTo(237, 147);
+  ctx.lineTo(180, 204);
+  ctx.lineTo(100, 204);
+  ctx.lineTo(43, 147);
+  ctx.lineTo(43, 67);
+  ctx.lineTo(100, 10);
+  ctx.stroke();
 
 }
 
