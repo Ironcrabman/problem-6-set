@@ -215,12 +215,16 @@ do {
   face = Number(face);
 } while (face + x >= 1024 || face + y >= 512 || face < 1)
 
-while(x - face < 10 || x + face > 1024) {
+while(x - face < 10) {
    x+= 10
 }
-while(y - face < 10 || y + face > 1024) {
+while(y - face < 10) {
   y+= 10
 }
+
+if(face + x >= 1024 || face + y >= 512){
+  alert("Invalid radius")
+} else{
 
 let mouth = face*0.70
 let eyes = face*0.10
@@ -243,7 +247,7 @@ ctx.arc(e2x-eyes, e2y, eyes, 0, 2*Math.PI);
 ctx.moveTo(x+mouth,m);
 ctx.arc(x, m, mouth, 0, Math.PI);
 ctx.stroke();
-
+  }
 }
 
 /*
@@ -291,16 +295,25 @@ function drawStopSign() {
 //57 = the triangle side lengths
 
   ctx.beginPath();
-  ctx.moveTo(100, 10);
-  ctx.lineTo(180, 10);
-  ctx.lineTo(237, 67);
-  ctx.lineTo(237, 147);
-  ctx.lineTo(180, 204);
-  ctx.lineTo(100, 204);
-  ctx.lineTo(43, 147);
-  ctx.lineTo(43, 67);
-  ctx.lineTo(100, 10);
+  ctx.moveTo(67, 10);
+  ctx.lineTo(147, 10);
+  ctx.lineTo(204, 67);
+  ctx.lineTo(204, 147);
+  ctx.lineTo(147, 204);
+  ctx.lineTo(67, 204);
+  ctx.lineTo(10, 147);
+  ctx.lineTo(10, 67);
+  ctx.lineTo(67, 10);
+  ctx.fillStyle = `red`
+  ctx.fill()
   ctx.stroke();
+
+  ctx.font = "65px sans-serif";
+  ctx.fillStyle = `white`;
+  ctx.fillText(`STOP`, 20, 133);
+
+  ctx.strokeText();
+
 
 }
 
@@ -323,6 +336,11 @@ function drawStopSign() {
  */
 
 function drawPyramid() {
+
+
+
+
+
 
 }
 
@@ -356,5 +374,46 @@ function drawPyramid() {
  */
 
 function drawHouse() {
+  let canvas = document.getElementById('canvas9');
+  let ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 1024, 512)
+
+  let hcolor = prompt("Please enter a house color.")
+  while(hcolor != "brown" && hcolor !="blue" && hcolor !="green" && hcolor !="orange" && hcolor !="purple" && hcolor !="red" && hcolor !="yellow"){
+    hcolor = prompt(`${hcolor} is not supported please enter another one.`)
+  }
+
+  let dcolor = prompt("Please enter a front door color")
+  while(dcolor != "brown" && dcolor !="blue" && dcolor !="green" && dcolor !="orange" && dcolor !="purple" && dcolor !="red" && dcolor !="yellow"){
+    dcolor = prompt(`${dcolor} is not supported or it is the same as the previous please enter another one.`)
+  }
+
+ctx.rect(150, 250, 724, 495)
+ctx.fillStyle = hcolor
+ctx.fillRect(150, 250, 724, 495);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(150, 250);
+ctx.lineTo(512, 10);
+ctx.lineTo(874, 250);
+ctx.lineTo(150, 250);
+ctx.fillStyle = `gray`
+ctx.fill();
+
+
+ctx.rect(462, 545, 100, 200);
+ctx.fillStyle = dcolor
+ctx.fillRect(462, 545, 100, 200);
+ctx.stroke();
+
+ctx.rect(250, 545, 100, 100)
+ctx.fillStyle = `light blue`
+ctx.fill();
+ctx.stroke();
+
+ctx.rect()
+
+
 
 }
