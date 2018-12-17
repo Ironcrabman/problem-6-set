@@ -288,18 +288,18 @@ if (isNaN(outer) == true || isNaN(inner) == true) {
 } else if (outer <= inner) {
   alert("Your outer radius must be larger than your inner radius.")
 } else {
-  context.beginPath();
-  context.moveTo(125, 125 - outer);
+  ctx.beginPath();
+  ctx.moveTo(125, 125 - outer);
   let x = 0;
   let angle = 0 * Math.PI;
   while (x < 5) {
-    context.lineTo(Math.cos(1.3 * Math.PI - angle) * inner + 125, Math.sin(1.3 * Math.PI - angle) * inner + 125);
-    context.lineTo(Math.cos(1.1 * Math.PI - angle) * outer + 125, Math.sin(1.1 * Math.PI - angle) * outer + 125);
+    ctx.lineTo(Math.cos(1.3 * Math.PI - angle) * inner + 125, Math.sin(1.3 * Math.PI - angle) * inner + 125);
+    ctx.lineTo(Math.cos(1.1 * Math.PI - angle) * outer + 125, Math.sin(1.1 * Math.PI - angle) * outer + 125);
     angle = angle + 0.4 * Math.PI;
     x = x + 1;
   }
-  context.closePath();
-  context.stroke();
+  ctx.closePath();
+  ctx.stroke();
   lineWidth = 1;
 }
 }
