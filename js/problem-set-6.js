@@ -427,4 +427,7 @@ ctx.fillStyle = `LightBlue`
 ctx.fillRect();
 ctx.stroke();
 
+ctx.arc(500, 500, 10, 0, 2*Math.PI)
+ctx.fillStyle = `yellow`
+ctx.stroke();
 }
