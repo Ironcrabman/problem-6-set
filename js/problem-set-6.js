@@ -387,7 +387,7 @@ function drawPyramid() {
         
     do{
         length = prompt("Enter the side length of a box")
-    } while(length >)
+    } while(length > 0)
 
 
 
