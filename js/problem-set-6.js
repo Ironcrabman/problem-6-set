@@ -408,22 +408,22 @@ ctx.fillRect(462, 545, 100, 200);
 ctx.stroke();
 
 ctx.rect(250, 545, 100, 100)
-ctx.fillStyle = '#8ED6FF'
+ctx.fillStyle = "#8ED6FF"
 ctx.fillRect();
 ctx.stroke();
 
 ctx.rect(250, 520, 100, 100)
-ctx.fillStyle = '#8ED6FF'
+ctx.fillStyle = "#8ED6FF"
 ctx.fillRect();
 ctx.stroke();
 
 ctx.rect(545, 545, 100, 100)    
-ctx.fillStyle = '#8ED6FF'
+ctx.fillStyle = "#8ED6FF"
 ctx.fillRect();
 ctx.stroke();
 
 ctx.rect(545, 520, 100, 100)
-ctx.fillStyle = '#8ED6FF'
+ctx.fillStyle = "#8ED6FF"
 ctx.fillRect();
 ctx.stroke();
 
