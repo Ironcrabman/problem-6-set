@@ -399,8 +399,8 @@ ctx.lineTo(512, 10);
 ctx.lineTo(874, 250);
 ctx.lineTo(150, 250);
 ctx.fillStyle = `gray`
+ctx.closePath();
 ctx.fill();
-
 
 ctx.rect(462, 545, 100, 200);
 ctx.fillStyle = dcolor
@@ -408,12 +408,13 @@ ctx.fillRect(462, 545, 100, 200);
 ctx.stroke();
 
 ctx.rect(250, 545, 100, 100)
-ctx.fillStyle = `light blue`
-ctx.fill();
+ctx.fillStyle = `DeepSkyBlue`
+ctx.fillRect();
 ctx.stroke();
 
-ctx.rect()
-
-
+ctx.rect(250, 400, 100, 100)
+ctx.fillStyle = `DeepSkyBlue`
+ctx.fillRect();
+ctx.stroke();
 
 }
