@@ -412,22 +412,24 @@ ctx.fillStyle = '#8ED6FF'
 ctx.fillRect();
 ctx.stroke();
 
-ctx.rect(250, 400, 100, 100)
+ctx.rect(250, 520, 100, 100)
 ctx.fillStyle = '#8ED6FF'
-ctx.fillRect(250, 400, 100, 100);
+ctx.fillRect();
 ctx.stroke();
 
 ctx.rect(545, 545, 100, 100)    
 ctx.fillStyle = '#8ED6FF'
-ctx.fillRect(545, 545, 100, 100);
+ctx.fillRect();
 ctx.stroke();
 
-ctx.rect(545, 400, 100, 100)
+ctx.rect(545, 520, 100, 100)
 ctx.fillStyle = '#8ED6FF'
-ctx.fill();
+ctx.fillRect();
 ctx.stroke();
 
+ctx.beginPath();
 ctx.arc(500, 500, 10, 0, 2*Math.PI)
 ctx.fillStyle = `yellow`
+ctx.fill();
 ctx.stroke();
 }
