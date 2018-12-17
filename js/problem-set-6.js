@@ -271,7 +271,7 @@ ctx.stroke();
 function drawStar() {
   let canvas = document.getElementById('canvas6');
   let ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, 1024, 256);
   
   let inner
   let outer
@@ -304,7 +304,6 @@ function drawStar() {
 
   ctx.beginPath();
   ctx.translate(125, 125);
-  ctx.moveTo(0,0 - outer);
 
   for (let i = 0; i < 5; i++) {
     ctx.rotate(Math.PI / 5);
