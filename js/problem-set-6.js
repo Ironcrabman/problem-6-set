@@ -279,7 +279,7 @@ function drawStar() {
    while(1){
    inner = Number(prompt("Enter an inner radius for the star."))
    outer = Number(prompt("Enter an outer radius for the star."))
-   if (inner>=5 && inner<=250 && Number.isInteger(inner) && inner<=250 && outer>=10 && outer<=300 && Number.isInteger(inner)) {
+   if (inner>=5 && inner<=250 && Number.isInteger(inner) && inner<=250 && outer>=10 && outer<=300 && Number.isInteger(inner) && inner < outer) {
       break;
     }
     else if (inner < 5){
@@ -383,6 +383,11 @@ function drawPyramid() {
   let ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, 1024, 512)
 
+  let length
+        
+    do{
+        length = prompt("Enter the side length of a box")
+    } while(length >)
 
 
 
