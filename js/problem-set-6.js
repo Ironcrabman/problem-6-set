@@ -409,24 +409,24 @@ ctx.stroke();
 
 let window = "#8ED6FF"
     
-ctx.rect(250, 600, 100, 100)
+ctx.rect(250, 550, 100, 100)
 ctx.fillStyle = window
-ctx.fillRect(250, 600, 100, 100);
+ctx.fillRect(250, 550, 100, 100);
 ctx.stroke();
 
-ctx.rect(250, 500, 100, 100)
+ctx.rect(250, 350, 100, 100)
 ctx.fillStyle = window
-ctx.fillRect(250, 500, 100, 100);
+ctx.fillRect(250, 350, 100, 100);
 ctx.stroke();
 
-ctx.rect(674, 600, 100, 100)    
+ctx.rect(674, 550, 100, 100)    
 ctx.fillStyle = window
-ctx.fillRect(674, 600, 100, 100);
+ctx.fillRect(674, 550, 100, 100);
 ctx.stroke();
 
-ctx.rect(674, 500, 100, 100)
+ctx.rect(674, 350, 100, 100)
 ctx.fillStyle = window
-ctx.fillRect(674, 500, 100, 100);
+ctx.fillRect(674, 350, 100, 100);
 ctx.stroke();
 
 ctx.beginPath();
