@@ -271,7 +271,7 @@ ctx.stroke();
 function drawStar() {
   let canvas = document.getElementById('canvas6');
   let ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, 1024, 512)
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   
   let inner
   let outer
