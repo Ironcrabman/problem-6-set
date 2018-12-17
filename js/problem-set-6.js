@@ -411,7 +411,7 @@ let window = "#8ED6FF"
     
 ctx.rect(250, 645, 100, 100)
 ctx.fillStyle = window
-ctx.fillRect(250, 545, 100, 100);
+ctx.fillRect(250, 645, 100, 100);
 ctx.stroke();
 
 ctx.rect(250, 400, 100, 100)
@@ -421,7 +421,7 @@ ctx.stroke();
 
 ctx.rect(674, 645, 100, 100)    
 ctx.fillStyle = window
-ctx.fillRect(674, 545, 100, 100);
+ctx.fillRect(674, 645, 100, 100);
 ctx.stroke();
 
 ctx.rect(674, 400, 100, 100)
