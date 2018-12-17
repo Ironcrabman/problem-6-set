@@ -273,45 +273,34 @@ function drawStar() {
   let ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, 1024, 256);
   
-  let inner
-  let outer
+let outer = prompt("Enter the Outer Radius");
+let inner = prompt("Enter the Inner Radius");
+    
+outer = Number(outer);
+inner = Number(inner);
 
-   while(1){
-   inner = Number(prompt("Enter an inner radius for the star."))
-   outer = Number(prompt("Enter an outer radius for the star."))
-   if (inner>=5 && inner<=250 && Number.isInteger(inner) && inner<=250 && outer>=10 && outer<=300 && Number.isInteger(inner) && inner < outer) {
-      break;
-    }
-    else if (inner < 5){
-      alert("The inner radius is too small put in a larger value.")
-    }
-    else if (inner > 250){
-      alert("The inner radius is too big put in a smaller value")
-    }
-    else if (outer < 10){
-      alert("The outer radius is too small put in a larger value.")
-    }
-    else if (outer > 300){
-      alert("The outer radius is too big put in a smaller value.")
-    }
-    else if (inner >= outer){
-      alert("The outer radius needs to be bigger than the inner radius.")
-    }
-    else {
-      alert("One of the radii lengths were invalid.")
-    }
+if (isNaN(outer) == true || isNaN(inner) == true) {
+  alert("One of your inputs is not a number.");
+} else if (outer < 2) {
+  alert("Your outer radius is too small.");
+} else if (inner < 1) {
+  alert("Your inner radius is too small.");
+} else if (outer <= inner) {
+  alert("Your outer radius must be larger than your inner radius.")
+} else {
+  context.beginPath();
+  context.moveTo(125, 125 - outer);
+  let x = 0;
+  let angle = 0 * Math.PI;
+  while (x < 5) {
+    context.lineTo(Math.cos(1.3 * Math.PI - angle) * inner + 125, Math.sin(1.3 * Math.PI - angle) * inner + 125);
+    context.lineTo(Math.cos(1.1 * Math.PI - angle) * outer + 125, Math.sin(1.1 * Math.PI - angle) * outer + 125);
+    angle = angle + 0.4 * Math.PI;
+    x = x + 1;
   }
-
-  ctx.beginPath();
-  ctx.translate(125, 125);
-
-  for (let i = 0; i < 5; i++) {
-    ctx.rotate(Math.PI / 5);
-    ctx.lineTo(0, 0 - (inner));
-    ctx.rotate(Math.PI / 5);
-    ctx.lineTo(0, 0 - outer);
-    ctx.stroke();
-    } 
+  context.closePath();
+  context.stroke();
+  lineWidth = 1;
 }
 
 /*
