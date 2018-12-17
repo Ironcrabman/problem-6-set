@@ -302,6 +302,7 @@ if (isNaN(outer) == true || isNaN(inner) == true) {
   context.stroke();
   lineWidth = 1;
 }
+}
 
 /*
  * Stop Sign. 7 points.
