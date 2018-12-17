@@ -430,7 +430,7 @@ ctx.fillRect(674, 400, 100, 100);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.arc(540, 570, 10, 0, 2*Math.PI)
+ctx.arc(540, 615, 10, 0, 2*Math.PI)
 ctx.fillStyle = `yellow`
 ctx.fill();
 ctx.stroke();
