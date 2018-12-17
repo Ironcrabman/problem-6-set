@@ -417,4 +417,14 @@ ctx.fillStyle = `DeepSkyBlue`
 ctx.fillRect();
 ctx.stroke();
 
+ctx.rect(545, 545, 100, 100)    
+ctx.fillStyle = `DeepSkyBlue`
+ctx.fillRect();
+ctx.stroke();
+
+ctx.rect(545, 400, 100, 100)
+ctx.fillStyle = `DeepSkyBlue`
+ctx.fillRect();
+ctx.stroke();
+
 }
