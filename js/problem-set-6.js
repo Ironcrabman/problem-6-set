@@ -407,24 +407,26 @@ ctx.fillStyle = dcolor
 ctx.fillRect(462, 545, 100, 200);
 ctx.stroke();
 
+let window = "#8ED6FF"
+    
 ctx.rect(250, 545, 100, 100)
-ctx.fillStyle = "#8ED6FF"
-ctx.fillRect();
+ctx.fillStyle = window
+ctx.fillRect(250, 545, 100, 100);
 ctx.stroke();
 
 ctx.rect(250, 520, 100, 100)
-ctx.fillStyle = "#8ED6FF"
-ctx.fillRect();
+ctx.fillStyle = window
+ctx.fillRect(250, 520, 100, 100);
 ctx.stroke();
 
 ctx.rect(545, 545, 100, 100)    
-ctx.fillStyle = "#8ED6FF"
-ctx.fillRect();
+ctx.fillStyle = window
+ctx.fillRect(545, 545, 100, 100);
 ctx.stroke();
 
 ctx.rect(545, 520, 100, 100)
-ctx.fillStyle = "#8ED6FF"
-ctx.fillRect();
+ctx.fillStyle = window
+ctx.fillRect(545, 520, 100, 100);
 ctx.stroke();
 
 ctx.beginPath();
