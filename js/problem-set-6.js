@@ -419,14 +419,14 @@ ctx.fillStyle = window
 ctx.fillRect(250, 400, 100, 100);
 ctx.stroke();
 
-ctx.rect(774, 545, 100, 100)    
+ctx.rect(674, 545, 100, 100)    
 ctx.fillStyle = window
-ctx.fillRect(774, 545, 100, 100);
+ctx.fillRect(674, 545, 100, 100);
 ctx.stroke();
 
-ctx.rect(774, 400, 100, 100)
+ctx.rect(674, 400, 100, 100)
 ctx.fillStyle = window
-ctx.fillRect(774, 400, 100, 100);
+ctx.fillRect(674, 400, 100, 100);
 ctx.stroke();
 
 ctx.beginPath();
