@@ -269,7 +269,50 @@ ctx.stroke();
  */
 
 function drawStar() {
+  let canvas = document.getElementById('canvas6');
+  let ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 1024, 512)
+  
+  let inner
+  let outer
 
+   while(1){
+   inner = Number(prompt("Enter an inner radius for the star."))
+   outer = Number(prompt("Enter an outer radius for the star."))
+   if (inner>=5 && inner<=250 && Number.isInteger(inner) && inner<=250 && outer>=10 && outer<=300 && Number.isInteger(inner)) {
+      break;
+    }
+    else if (inner < 5){
+      alert("The inner radius is too small put in a larger value.")
+    }
+    else if (inner > 250){
+      alert("The inner radius is too big put in a smaller value")
+    }
+    else if (outer < 10){
+      alert("The outer radius is too small put in a larger value.")
+    }
+    else if (outer > 300){
+      alert("The outer radius is too big put in a smaller value.")
+    }
+    else if (inner >= outer){
+      alert("The outer radius needs to be bigger than the inner radius.")
+    }
+    else {
+      alert("One of the radii lengths were invalid.")
+    }
+  }
+
+  ctx.beginPath();
+  ctx.translate(125, 125);
+  ctx.moveTo(0,0 - outer);
+
+  for (let i = 0; i < 5; i++) {
+    ctx.rotate(Math.PI / 5);
+    ctx.lineTo(0, 0 - (inner));
+    ctx.rotate(Math.PI / 5);
+    ctx.lineTo(0, 0 - outer);
+    ctx.stroke();
+    } 
 }
 
 /*
@@ -336,7 +379,9 @@ function drawStopSign() {
  */
 
 function drawPyramid() {
-
+  let canvas = document.getElementById('canvas8');
+  let ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, 1024, 512)
 
 
 
