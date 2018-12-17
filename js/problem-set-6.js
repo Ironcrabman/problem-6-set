@@ -414,23 +414,23 @@ ctx.fillStyle = window
 ctx.fillRect(250, 545, 100, 100);
 ctx.stroke();
 
-ctx.rect(250, 520, 100, 100)
+ctx.rect(250, 400, 100, 100)
 ctx.fillStyle = window
-ctx.fillRect(250, 520, 100, 100);
+ctx.fillRect(250, 400, 100, 100);
 ctx.stroke();
 
-ctx.rect(545, 545, 100, 100)    
+ctx.rect(774, 545, 100, 100)    
 ctx.fillStyle = window
-ctx.fillRect(545, 545, 100, 100);
+ctx.fillRect(774, 545, 100, 100);
 ctx.stroke();
 
-ctx.rect(545, 520, 100, 100)
+ctx.rect(774, 400, 100, 100)
 ctx.fillStyle = window
-ctx.fillRect(545, 520, 100, 100);
+ctx.fillRect(774, 400, 100, 100);
 ctx.stroke();
 
 ctx.beginPath();
-ctx.arc(500, 500, 10, 0, 2*Math.PI)
+ctx.arc(550, 600, 10, 0, 2*Math.PI)
 ctx.fillStyle = `yellow`
 ctx.fill();
 ctx.stroke();
