@@ -380,7 +380,6 @@ function drawPyramid() {
   let max = 5;
   let xOver = 0;
   let yUp = 0;
-  let y = 0;
   let init = 0;
   
     do{
