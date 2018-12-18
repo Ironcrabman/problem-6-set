@@ -394,14 +394,14 @@ function drawPyramid() {
           ctx.strokeRect(10 + xOver + init, 512 - 10 - length - yUp, length, length);
           xOver = xOver + length;
           x++;
-        }
+      }
       y++;
       x = 0;
       xOver = 0;
       yUp = yUp + length;
       max = max - 1;
       init = init + (length / 2);
-      }    
+   }    
 }
 
 /*
