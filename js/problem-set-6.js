@@ -378,11 +378,37 @@ function drawPyramid() {
         
     do{
         length = prompt("Enter the side length of a box")
-    } while(length > 0)
-
-
-
-
+    } while(length < 0 || length > 100)
+    ctx.rect(length, length, 10, 502);
+    ctx.stroke();
+    ctx.rect(length, length, 10 + length, 502);
+    ctx.stroke();
+    ctx.rect(length, length, 10 + (length*2), 502);
+    ctx.stroke();
+    ctx.rect(length, length, 10 + (length*3), 502);
+    ctx.stroke();
+    ctx.rect(length, length, 10 + (length*4), 502);
+    ctx.stroke();
+    ctx.rect(length, length, 10 + (length/2), 502 - length);
+    ctx.stroke();
+    ctx.rect(length, length, (10 + (length/2)) + length, 502 - length);
+    ctx.stroke();
+    ctx.rect(length, length, (10 + (length/2)) + (length*2), 502 - length);
+    ctx.stroke();
+    ctx.rect(length, length, (10 + (length/2)) + (length*3), 502 - length);
+    ctx.stroke();
+    ctx.rect(length, length, 10 + length, 502 - (length*2));
+    ctx.stroke();
+    ctx.rect(length, length, (10 + length) + length, 502 - (length*2));
+    ctx.stroke();
+    ctx.rect(length, length, (10 + length) + (length*2), 502 - (length*2));
+    ctx.stroke();
+    ctx.rect(length, length, 10 + (length*1.5), 502 - (length*3));
+    ctx.stroke();
+    ctx.rect(length, length, 10 + (length*1.5) + length, 502 - (length*3));
+    ctx.stroke();
+    ctx.rect(length, length, 10 + (length*2), 502 - (length*4));
+    ctx.stroke();
 }
 
 /*
